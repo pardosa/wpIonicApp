@@ -1,0 +1,14 @@
+<ion-view view-title="Comments">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="comment in comments | orderBy: 'comment.comment_post_ID'" href="#/app/comment/{{comment.comment_ID}}">
+        {{comment.comment_author}}  =>  {{comment.comment_author_email}}
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll
+  ng-if="moreDataCanBeLoaded()"
+  icon="ion-loading-c"
+  on-infinite="loadMore()">
+</ion-infinite-scroll>
+  </ion-content>
+</ion-view>

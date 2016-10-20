@@ -1,0 +1,21 @@
+<ion-view view-title="Comments">
+  <ion-content ng-repeat="comm in comment | orderBy: 'comment.comment_date'">
+    <ion-list>
+      <ion-item>
+        Name: {{comm.comment_author}}
+      </ion-item>
+      <ion-item>
+      Email: {{comm.comment_author_email}}
+      </ion-item>
+      <ion-item>
+        IP Adress: {{comm.comment_author_IP}}
+      </ion-item>
+      <ion-item>
+        Date: {{comm.comment_date}}
+      </ion-item>
+      <ion-item>
+        Comment: {{comm.comment_content}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
